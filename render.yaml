@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-ipa-signing-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_SECRET
+        generateValue: true
